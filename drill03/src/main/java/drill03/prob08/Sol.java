@@ -21,6 +21,8 @@ public class Sol {
 			} else {
 				System.out.println("Pass");
 			}
+		} else {
+			System.out.println("Faill");
 		}
 	}
 
