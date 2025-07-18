@@ -29,5 +29,7 @@ public class Sol {
 //		}
 
 		System.out.println("자릿수 합: " + sum);
+		
+		sc.close();
 	}
 }

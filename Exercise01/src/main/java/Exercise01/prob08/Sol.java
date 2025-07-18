@@ -27,5 +27,7 @@ public class Sol {
 		for (int i = 0; i < MONEYS.length; i++) {
 			System.out.println(MONEYS[i] + "원: " + moneyCnt[i] + "개");
 		}
+		
+		sc.close();
 	}
 }

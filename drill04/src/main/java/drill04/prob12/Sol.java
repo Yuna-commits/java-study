@@ -27,6 +27,8 @@ public class Sol {
 		}
 
 		System.out.println(num + "는(은)" + (isPrime ? "소수입니다." : "소수가 아닙니다."));
+		
+		sc.close();
 	}
 
 }

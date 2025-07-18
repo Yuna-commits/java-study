@@ -17,5 +17,7 @@ public class Sol {
 			System.out.print((ch++) + " ");
 			num--;
 		}
+		
+		sc.close();
 	}
 }

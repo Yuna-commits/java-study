@@ -16,5 +16,7 @@ public class Sol {
 		}
 		System.out.println("절댓값: " + num);
 		// System.out.println("Abs: " + Math.abs(num));
+		
+		sc.close();
 	}
 }

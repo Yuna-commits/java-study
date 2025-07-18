@@ -21,6 +21,8 @@ public class Sol {
 		} else {
 			System.out.println("알파벳이 아닙니다.");
 		}
+		
+		sc.close();
 	}
 
 }

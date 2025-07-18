@@ -22,5 +22,7 @@ public class Sol {
 		}
 
 		System.out.println(num + "는(은) " + ((num == result) ? "완전수입니다." : "완전수가 아닙니다."));
+		
+		sc.close();
 	}
 }
