@@ -10,8 +10,8 @@ package drill04.prob06;
 public class Sol {
 
 	public static void main(String[] args) {
-		int mul = 1;
-		for (int i = 1; i < 10; i++) {
+		int mul = 1, i = 1;
+		while (i < 10) {
 			if (i % 2 != 0) {
 				mul *= i;
 			}
