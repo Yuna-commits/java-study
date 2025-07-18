@@ -16,11 +16,17 @@ public class Sol {
 		int num = sc.nextInt();
 
 		int sum = 0;
-		String str = String.valueOf(num);
 
-		for (int i = 0; i < str.length(); i++) {
-			sum += (str.charAt(i)) - '0';
+		while(num>0) {
+			sum+=(num%10);
+			num/=10;
 		}
+		
+//		String str = String.valueOf(num);
+//
+//		for (int i = 0; i < str.length(); i++) {
+//			sum += (str.charAt(i)) - '0';
+//		}
 
 		System.out.println("자릿수 합: " + sum);
 	}
