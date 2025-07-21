@@ -1,4 +1,4 @@
-package Exercise01.prob03;
+package exercise01.prob03;
 
 /**
  * 1~100까지 중 5의 배수 개수 출력

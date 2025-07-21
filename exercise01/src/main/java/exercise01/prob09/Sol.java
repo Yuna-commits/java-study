@@ -1,4 +1,4 @@
-package Exercise01.prob09;
+package exercise01.prob09;
 
 /**
  * 문자 배열(char[])의 공백을 모두 -로 바꾸어 출력하고 바뀐 공백의 개수를 함께 출력하세요.

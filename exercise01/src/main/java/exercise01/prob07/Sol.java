@@ -1,4 +1,4 @@
-package Exercise01.prob07;
+package exercise01.prob07;
 
 /**
  * 아래와 같은 출력 결과를 만드는 프로그램을 작성하세요.
