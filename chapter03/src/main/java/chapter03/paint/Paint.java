@@ -11,8 +11,8 @@ public class Paint {
 		canvas.drawPoint(point1);
 
 		Point point2 = new Point();
-		point2.setX(10);
-		point2.setY(20);
+		point2.setX(100);
+		point2.setY(200);
 
 		canvas.drawPoint(point2);
 	}
