@@ -3,6 +3,15 @@ package chapter03.paint;
 public class Point {
 	private int x, y;
 
+	public Point() {
+
+	}
+
+	public Point(int x, int y) {
+		this.x = x;
+		this.y = y;
+	}
+
 	public int getX() {
 		return x;
 	}
@@ -19,7 +28,21 @@ public class Point {
 		this.y = y;
 	}
 
+//	public void disappear() {
+//		System.out.println("점[x=" + x + ", y=" + y + "]을 지웠습니다.");
+//	}
+
 	public void show() {
 		System.out.println("점[x=" + x + ", y=" + y + "]을 그렸습니다.");
+	}
+
+	public void show(boolean visible) {
+		if (visible) {
+			show();
+		} else {
+			System.out.println("점[x=" + x + ", y=" + y + "]을 지웠습니다.");
+			setX(0);
+			setY(0);
+		}
 	}
 }
