@@ -26,5 +26,7 @@
 		<module>chapter03</module>
 		<module>exercise01</module>
 		<module>exercise02</module>
+		<module>drill06</module>
+		<module>exercise03</module>
 	</modules>
 </project>
