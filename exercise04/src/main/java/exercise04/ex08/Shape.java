@@ -24,7 +24,7 @@ public abstract class Shape {
 		return height;
 	}
 
-	public abstract double getArea();
+	public abstract double getArea();//넓이
 
-	public abstract double getPerimeter();
+	public abstract double getPerimeter();//둘레
 }

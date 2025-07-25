@@ -9,6 +9,7 @@ public class ProbMain {
 			System.out.println("area:" + shape.getArea());
 			System.out.println("perimeter:" + shape.getPerimeter());
 
+			//shape이 Resizable을 구현했으면 true
 			if (shape instanceof Resizable) {
 				Resizable resizable = (Resizable) shape;
 				resizable.resize(0.5);
