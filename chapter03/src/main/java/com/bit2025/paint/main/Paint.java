@@ -1,6 +1,11 @@
-package chapter03.paint;
+package com.bit2025.paint.main;
 
 import java.io.Serializable;
+
+import com.bit2025.paint.canvas.*;
+import com.bit2025.paint.point.*;
+import com.bit2025.paint.shape.*;
+import com.bit2025.paint.text.*;
 
 public class Paint {
 	public static void main(String[] args) {
@@ -40,14 +45,14 @@ public class Paint {
 
 		// 다운캐스팅 전에 타입 검사
 		Object o = new Circle();
-		//o instanceof Circle -> true
-		if (o instanceof String) {//false
+		// o instanceof Circle -> true
+		if (o instanceof String) {// false
 			String s = (String) o;
 		}
-		
-		//우측항이 인터페이스인 경우
-		//상속 hierachy에 상관없이 사용 가능
-		System.out.println(c instanceof Drawable);//true
-		System.out.println(c instanceof Serializable);//false
+
+		// 우측항이 인터페이스인 경우
+		// 상속 hierachy에 상관없이 사용 가능
+		System.out.println(c instanceof Drawable);// true
+		System.out.println(c instanceof Serializable);// false
 	}
 }

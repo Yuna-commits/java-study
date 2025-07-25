@@ -1,4 +1,6 @@
-package chapter03.paint;
+package com.bit2025.paint.text;
+
+import com.bit2025.paint.canvas.Drawable;
 
 public class GraphicText implements Drawable {
 	private String text;
