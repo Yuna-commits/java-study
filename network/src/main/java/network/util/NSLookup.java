@@ -20,11 +20,9 @@ public class NSLookup {
 			}
 			try {
 				// 등록된 모든 IP 주소를 배열로 반환
-				InetAddress[] InetAddresses = InetAddress.getAllByName(line);
-				for (InetAddress InetAddress : InetAddresses) {
-					String ipAddress = (InetAddress.toString()).substring(line.length() + 1);
-
-					System.out.println(line + " : " + ipAddress);
+				InetAddress[] inetAddresses = InetAddress.getAllByName(line);
+				for (InetAddress inetAddress : inetAddresses) {
+					System.out.println(line + " : " + inetAddress.getHostAddress());
 				}
 			} catch (UnknownHostException ex) {
 				System.out.println("알려진 호스트가 없습니다.");
