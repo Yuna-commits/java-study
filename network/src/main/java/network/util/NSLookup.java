@@ -25,7 +25,7 @@ public class NSLookup {
 					System.out.println(line + " : " + inetAddress.getHostAddress());
 				}
 			} catch (UnknownHostException ex) {
-				System.out.println("알려진 호스트가 없습니다.");
+				System.out.println(line + " : 알려진 호스트가 없습니다.");
 			}
 		}
 
