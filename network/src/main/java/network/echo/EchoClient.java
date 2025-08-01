@@ -11,19 +11,17 @@ import java.net.InetSocketAddress;
 import java.net.Socket;
 import java.util.Scanner;
 
-import network.test.TCPServer;
-
 public class EchoClient {
 	private static final String SERVER_IP = "127.0.0.1";// loopback IP
 
 	public static void main(String[] args) {
 		Scanner scanner = new Scanner(System.in);
-
 		Socket socket = null;
+		
 		try {
 			socket = new Socket();
 
-			socket.connect(new InetSocketAddress(SERVER_IP, TCPServer.PORT));
+			socket.connect(new InetSocketAddress(SERVER_IP, EchoServer.PORT));
 
 			InputStream is = socket.getInputStream();
 			OutputStream os = socket.getOutputStream();
@@ -33,7 +31,7 @@ public class EchoClient {
 
 			while (true) {
 				// 사용자 입력
-				System.out.print("> ");
+				System.out.print(">> ");
 				String line = scanner.nextLine();
 
 				if ("quit".equals(line)) {
@@ -52,7 +50,7 @@ public class EchoClient {
 					break;
 				}
 
-				System.out.println("< " + data);
+				System.out.println("<< " + data);
 			}
 		} catch (IOException e) {
 			log("error: " + e);
