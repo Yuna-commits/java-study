@@ -40,8 +40,8 @@ public class TCPServer {
 				InputStream is = socket.getInputStream();
 				OutputStream os = socket.getOutputStream();
 
+				// 5. 데이터 읽기 -> client to server
 				while (true) {
-					// 5. 데이터 읽기 -> client to server
 					byte[] buffer = new byte[256];
 					// socket으로 들어온 바이트를 읽어 buffer에 채움
 					// -> 읽을 수 있는 바이트가 올 때까지 Blocking
