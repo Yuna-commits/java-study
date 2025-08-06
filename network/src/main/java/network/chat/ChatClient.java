@@ -26,15 +26,15 @@ public class ChatClient {
 			// 4. reader/writer 생성
 			BufferedReader br = new BufferedReader(
 					new InputStreamReader(socket.getInputStream(), StandardCharsets.UTF_8));
-			PrintWriter pw = new PrintWriter(
-					new OutputStreamWriter(socket.getOutputStream(), StandardCharsets.UTF_8), true);
+			PrintWriter pw = new PrintWriter(new OutputStreamWriter(socket.getOutputStream(), StandardCharsets.UTF_8),
+					true);
 
 			// 5. 채팅 시작
 			while (true) {
 				// client가 QUIT을 입력해도 소켓은 아직 열려있기 때문에 채팅을 계속할 수 있음
 				startChat(scanner, br, pw);
 
-				// 채팅 완전 종료 여부
+				// 채팅 완전 종료 여부 -> 현재 연결된 클라이언트의 채팅을 종료
 				consoleLog("Type \"EXIT\" to disconnect, or press Enter to rejoin.");
 				String exit = scanner.nextLine();
 				if (exit.equalsIgnoreCase("EXIT")) {
@@ -60,17 +60,27 @@ public class ChatClient {
 			}
 		}
 	}
-	
+
 	private static void startChat(Scanner scanner, BufferedReader br, PrintWriter pw) throws IOException {
 		// 6. JOIN
 		System.out.print("Type your nickname>> ");
 		String nickName = scanner.nextLine();
-		
+
 		pw.println("JOIN:" + nickName);
 
+		/**
+		 * JOIN:OK와 Type your command>> 출력 겹치는 문제 해결하기
+		 * 아래 코드를 사용하면 첫번째 닉네임 입력에서 "JOIN:OK".equals(response)==false, 메인으로 돌아가버림
+		 */
+		// JOIN:OK 응답 대기
 //		String response = br.readLine();
-//		System.out.println(response);
-
+//		if ("JOIN:OK".equals(response)) {
+//			consoleLog("Successfully joined the chat.");
+//		} else {//현재 코드에서는 실행 x
+//			consoleLog("Failed to join the chat: " + response);
+//			return;
+//		}
+//		
 		// 7. broadcast 메시지를 받기 위한 스레드 시작
 		new ChatClientThread(br).start();
 
